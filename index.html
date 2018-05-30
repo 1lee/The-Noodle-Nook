@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+        <link rel="icon" href="img/favicon.ico" type="image/x-icon" />
+        <!--JQUERY CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+        <!--JQUERY local-->
+        <script src="js/jquery-2.2.0.min.js"></script>
+        <!--Lettering.js-->
+        <script src="js/jquery.lettering.js"></script>
+        <!--Textillate.js-->
+        <script src="js/jquery.textillate.js"></script>
+        <script src="js/main.js"></script>
+
+        <!--STYLESHEET-->
+        
+        <link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link rel="stylesheet" href="css/animate.css">
+
+
+        <title>The Noodle Nook</title>
+    </head>
+    <!--BEGIN BODY================================================================================================-->
+
+    <body>
+
+        <header>
+            <h1 class="animated"><img id="logo" src="img/noodleIcon.svg"/>The Noodle Nook</h1>
+            <nav>
+                <img class="navLogo" id="logo" src="img/noodleIcon-small.svg"/>
+                <ul class="mainMenu">
+                    <li class="menuItem">
+                        <a href="#menu" id="triggerMenuModal" class="navLink">Menu</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#locations" id="triggerLocationsModal" class="navLink">Locations</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#specials" id="triggerSpecialsModal" class="navLink">Specials</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#catering" id="triggerCateringModal" class="navLink">Catering</a>
+                    </li>
+                    <li class="menuItem">
+                        <a href="#careers" id="triggerCareersModal" class="navLink">Careers</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Menu Modal -->
+        <div class="modal hide">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <div class="modalHeader">
+                    <!--Modal Header dynamically generated from JS-->
+                </div>
+                <!--Menu Contents-->
+                <div class="menuModalBody hide">
+                    <img src="img/menu.gif" class="desktopSize"/>
+                    <img src="img/smallmenu.gif" class="mobileSize"/>
+                    <!--END .menuModalBody-->
+                </div>
+
+                <!--Locations Contents-->
+                <div class="locationsModalBody hide" id="map">
+                    <!--END .locationsModalBody-->
+                </div>
+
+                <!--Specials Contents-->
+                <div class="specialsModalBody hide">
+                    <img src="img/specials.png"/>
+                    <!--END .specialsModalBody-->
+                </div>
+
+                <!--Catering Contents-->
+                <div class="cateringModalBody hide">
+                    <img src="img/catering.png"/>
+                    <!--END .cateringModalBody-->
+                </div>
+
+                <!--Careers Contents-->
+                <div class="careersModalBody hide">
+                    <h4>Upload Resume</h4>
+                    <input type="file" id="fileinput"/>
+                    <p>***for demo only***</p>
+                    <!--END .careersModalBody-->
+                </div>
+
+                <div class="modalFooter">
+                    <span>
+                        <a href="#" class="closeModal">close x</a>
+                    </span>
+                </div>
+                <!--END .modal-content-->
+            </div>
+            <!--END .modal-->
+        </div>
+
+        <div class="displayOne">
+
+            <span class="blurbOne tlt">Fresh Ingredients + Expert Prep = Bon Appetit
+
+            </span>
+
+            <img src="img/charsui.jpg" class="picOne"/>
+            <!--END .displayOne-->
+        </div>
+
+        <div class="displayTwo">
+
+            <span class="blurbTwo tlt">Crafted with pride in our worldclass kitchen!
+            </span>
+
+            <img src="img/pasta.jpg" class="picTwo"/>
+            <!--END .displayTwo-->
+        </div>
+
+        <div class="displayThree">
+
+            <span class="blurbThree tlt">Free highspeed wifi & cozy accomadations, always!
+            </span>
+
+            <img src="img/restaurant.jpg" class="picThree"/>
+            <!--END .displayThree-->
+        </div>
+
+        <footer>
+            <div class="footerWrapper">
+
+                <div class="footerElementLeft">
+
+                    <ul class="footerMenu">
+                        <li>About Us</li>
+                        <li>Press Releases</li>
+                        <li>Community</li>
+                        <li>Noodle Kids Club</li>
+
+                    </ul>
+                    <!--END .footerElementLeft-->
+                </div>
+
+                <div class="footerElementCenter">
+                    <ul class="footerMenu">
+                        <li>Nutrition Info</li>
+                        <li>Terms and Conditions</li>
+                        <li>Contact Us</li>
+                    </ul>
+                    <!--END .footerElementCenter-->
+                </div>
+
+                <div class="footerElementRight">
+
+                    <i class="fa fa-facebook-square fa-3x icon" aria-hidden="true"></i>
+                    <i class="fa fa-google-plus-square fa-3x icon" aria-hidden="true"></i>
+                    <i class="fa fa-instagram fa-3x icon" aria-hidden="true"></i>
+                    <i class="fa fa-pinterest-square fa-3x icon" aria-hidden="true"></i>
+                    <i class="fa fa-twitter-square fa-3x icon" aria-hidden="true"></i>
+                    <!--END .footerElementRight-->
+                </div>
+
+                <!--END .footerWrapper-->
+            </div>
+
+        </footer>
+
+        <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQoQeXaQ0e-w3_MI6VDcZq_wvteRM3-kA&v=3&callback=initMap">
+        </script>
+
+
+    </body>
+
+</html>

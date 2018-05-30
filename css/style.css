@@ -1,0 +1,430 @@
+@font-face {
+    font-family: OpenSans;
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: ChampagneLimousines;
+    src: url("../fonts/ChampagneLimousines.ttf");
+}
+body {
+    background: #ffffff url("../img/cuttingboard.jpg") repeat left top;
+}
+
+header {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+}
+#logo {
+    margin: 0 1vw 1vh 1vw;
+}
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 1vh;
+    color: white;
+    background-color: rgba(250, 255, 0, 0.9);
+    font-family: OpenSans;
+    font-size: 10vh;
+    font-weight: bolder;
+}
+.translateUp {
+    transform: translateY(-18vh);
+}
+.translateUp600 {
+    transform: translateY(-20vh);
+}
+.translateUpMobile {
+    transform: translateY(-7vh);
+}
+nav {
+    transition: transform 0.5s ease;
+    text-align: center;
+    background-color: rgba(250, 255, 0, 0.65);
+}
+.navLogo {
+    float: left;
+    transition: opacity 1s ease;
+    transform: scale(0.85);
+    opacity: 0;
+}
+.navLink {
+    text-decoration: none;
+}
+.navLink:link {
+    color: white;
+}
+.navLink:visited {
+    color: white;
+}
+.navLink:hover {
+    text-decoration: none;
+    color: yellow;
+}
+.navLink:active {
+    color: white;
+}
+.menuItem {
+    display: inline-block;
+    margin: 1vh 2vw 1vh 2vw;
+    transition: margin 1s linear;
+    color: white;
+    font-size: 3vh;
+}
+.modal {
+    position: fixed;
+    display: block;
+    z-index: 20;
+    /* Sit on top */
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    margin: 0 auto;
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+
+.modal-content {
+    width: auto;
+    max-width: 80vw;
+    /* Could be more or less, depending on screen size */
+    height: 66vh;
+    margin: 5% auto;
+    /* 15% from the top and centered */
+    -webkit-animation-name: fadeEffect;
+    animation-name: fadeEffect;
+    -webkit-animation-duration: 0.8s;
+    animation-duration: 0.8s;
+}
+.modalHeader {
+    text-align: center;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    background-color: rgba(250, 255, 0, 0.9);
+    font-size: 3vh;
+}
+h3 {
+    display: inline-block;
+    color: #ffffff;
+}
+.menuModalBody {
+    display:block;
+    position: relative;
+overflow-y: scroll;
+    height: 85%;
+    width:auto;
+    margin:auto;
+
+    border: 2px solid white;
+}
+.menuModalBody img {
+    width: 100%;
+}
+.locationsModalBody {
+    display:block;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+}
+#map {
+      height: 100%;
+    }
+
+.desktopSize {
+    display: block;
+}
+.mobileSize {
+    display: none;
+}
+.specialsModalBody {
+    display:block;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+}
+.specialsModalBody img{
+    width: 100%;
+}
+.cateringModalBody {
+    display:block;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+}
+.cateringModalBody img{
+    width: 100%;
+}
+
+.careersModalBody {
+    display:block;
+    text-align: center;
+    position: relative;
+    overflow-x: hidden;
+    height: auto;
+    width: auto;
+    border: 2px solid white;
+    background-color: beige;
+    padding: 2vh 0 2vh 0;
+}
+
+.menuEntree {
+    text-align: center;
+}
+.entreeDescription {
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}
+/* The Close Button */
+
+.closeModal {
+    position: relative;
+    float: right;
+    margin-right: 1vw;
+    text-decoration: none;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+}
+.closeModal:hover, .closeModal:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.modalFooter {
+    height: 6vh;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: rgba(250, 255, 0, 0.9);
+}
+
+/* Modal Animation */
+
+@-webkit-keyframes fadeEffect {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+@keyframes fadeEffect {
+    from {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.displayOne {
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+    right:0;
+    width: 85vw;
+    height: auto;
+    margin: auto;
+    margin-top: 33vh;
+    border: 4px solid rgba(217, 203, 111, 0.74);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.picOne {
+    transition: transform 2s ease;
+}
+.picOne:hover {
+    transform: scale(1.25);
+}
+.blurbOne {
+    position: absolute;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    z-index: 5;
+    bottom: 15%;
+    height: 5vh;
+    color: #ffffff;
+    font-size: 8vh;
+    font-family: ChampagneLimousines;
+}
+.blurbOneContent {
+    position: absolute;
+    z-index: 5 color: #ffffff;
+}
+.displayTwo {
+    position: relative;
+    right:0;
+    z-index: 5;
+    overflow: hidden;
+    width: 85vw;
+    height: auto;
+    margin: auto;
+    margin-top: 13vh;
+    border: 4px solid rgba(217, 203, 111, 0.74);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.picTwo {
+    transition: transform 2s ease;
+}
+.picTwo:hover {
+    transform: scale(1.25);
+}
+.blurbTwo {
+    position: absolute;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    z-index: 5;
+    bottom: 15%;
+    height: 5vh;
+    color: #ffffff;
+    font-size: 8vh;
+    font-family: ChampagneLimousines;
+}
+
+.displayThree {
+    position: relative;
+    right:0;
+    z-index: 5;
+    overflow: hidden;
+    width: 85vw;
+    height: auto;
+    margin: auto;
+    margin-top: 13vh;
+    margin-bottom: 25vh;
+    border: 4px solid rgba(217, 203, 111, 0.74);
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.picThree {
+    transition: transform 2s ease;
+}
+.picThree:hover {
+    transform: scale(1.25);
+}
+.blurbThree {
+    position: absolute;
+    margin-left: 1vw;
+    margin-bottom: 1vh;
+    font-weight: bold;
+    z-index: 5;
+    bottom: 15%;
+    height: 5vh;
+    color: #ffffff;
+    font-size: 8vh;
+    font-family: ChampagneLimousines;
+}
+
+
+footer {
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1vh;
+    margin-top: 10vh;
+    transition: height 0.5s linear;
+    background-color: rgba(238, 249, 157, 0.64);
+
+    transition: height 1s ease;
+}
+.footerWrapper {
+    position: relative;
+    text-align: left;
+    display: block;
+}
+.footerMenu {
+    list-style-type: none;
+    color: gray;
+}
+.footerElementLeft {
+    height: auto;
+    width: 33%;
+    display:inline-block;
+    float:left;
+}
+
+.footerElementCenter {
+    height: auto;
+    margin:auto;
+    width: 33%;
+    display: inline-block;
+
+}
+
+.footerElementRight {
+    height: auto;
+    width: 33%;
+    display: inline-block;
+    float: right;
+}
+
+.icon {
+    color: gray;
+    margin: 2vh 1vw 0 1vw;
+}
+
+@media only screen and (max-width: 600px){
+    h1 {
+        font-size: 8vh;
+    }
+    .desktopSize {
+        display: none;
+    }
+    .mobileSize {
+        display: block;
+    }
+    .blurbOne, .blurbTwo, .blurbThree {
+        bottom: 33%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+#logo {
+    display: none;
+}
+.navLogo {
+    display: none;
+}
+h1 {
+    text-align: center;
+    font-size: 6vh;
+}
+
+    .desktopSize {
+        display: none;
+    }
+    .mobileSize {
+        display: block;
+    }
+}
